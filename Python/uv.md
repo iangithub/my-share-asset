@@ -331,6 +331,10 @@ uv pip freeze > requirements.txt
 # 7. 確認檔案存在
 ls requirements.txt  # macOS/Linux
 dir requirements.txt # Windows
+
+# 8. 用 uv 在虛擬環境執行 .py 檔案
+uv python your_script.py
+
 ```
 
 ---
@@ -408,18 +412,25 @@ source .venv/bin/activate  # macOS/Linux
 
 ### 現有專案建立uv虛擬環境
 
+* 一般情況下，專案資料夾內會有 `requirements.txt` 檔案，裡面記錄了所有需要的套件版本。
+
 ```bash
 # 1. 進入專案資料夾
 cd your-project
 # 2. 建立虛擬環境
 uv venv
-# 3. 啟用虛擬環境
-.venv\Scripts\Activate.ps1  # Windows
-.venv\Scripts\Activate.ps1
-# 4. 安裝套件
+# 3. 還原套件
 uv pip install -r requirements.txt
 ```
-S
+
+* 通常不需要直接 `.venv\Scripts\Activate.ps1` 進入虛擬環境，而是透過 uv 指令來管理。但在某些情況下，直接啟用虛擬環境也是可以的。
+```bash
+# 1. 啟用虛擬環境
+.venv\Scripts\Activate.ps1  # Windows
+.venv\Scripts\Activate.ps1
+```
+
+---
 
 ### 給學員的話
 
