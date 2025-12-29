@@ -406,6 +406,21 @@ source .venv/bin/activate  # macOS/Linux
 4️⃣ `uv pip install` 安裝套件  
 5️⃣ `freeze` 儲存清單  
 
+### 現有專案建立uv虛擬環境
+
+```bash
+# 1. 進入專案資料夾
+cd your-project
+# 2. 建立虛擬環境
+uv venv
+# 3. 啟用虛擬環境
+.venv\Scripts\Activate.ps1  # Windows
+.venv\Scripts\Activate.ps1
+# 4. 安裝套件
+uv pip install -r requirements.txt
+```
+S
+
 ### 給學員的話
 
 > 環境設定可能有點枯燥，但這是開發的基礎功。就像蓋房子要先打地基一樣，把環境搞定了，後面學習 LangChain 和 LangGraph 才會順利!
